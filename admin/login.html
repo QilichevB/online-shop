@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="login-container" style="max-width: 300px; margin: 100px auto;">
+    <h2>Admin Login</h2>
+    <input type="text" id="username" placeholder="Login" /><br /><br />
+    <input type="password" id="password" placeholder="Parol" /><br /><br />
+    <button onclick="login()">Kirish</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      if (user === "admin" && pass === "1234") {
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("error").innerText = "Login yoki parol noto‘g‘ri";
+      }
+    }
+  </script>
+</body>
+</html>
